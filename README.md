@@ -3,24 +3,24 @@
 
 <h3> Table of Contents: </h3>
 
-1.	Entity-relationship Diagram
-2.	Data Repositories
-3.	Business Services
-4.	REST Controllers
-5.	Security and Authentication
-6.	Technology Enablers
-6.1.	 Spring Boot
-6.2.	 Hibernate
-6.3.	 Postgres
-6.4.	 Redis
-6.5.	Spring-data
-6.6.	Spring-security
-6.7.	 REST and HTTP
+<h4> 1.	Entity-relationship Diagram </h4>
+<h4> 2.	Data Repositories </h4>
+<h4> 3.	Business Services </h4>
+<h4> 4.	REST Controllers </h4>
+<h4> 5.	Security and Authentication </h4>
+<h4> 6.	Technology Enablers </h4>
+<h4>  6.1.	 Spring Boot </h4>
+<h4>  6.2.	 Hibernate </h4>
+<h4>  6.3.	 Postgres </h4>
+<h4>  6.4.	 Redis </h4>
+<h4>  6.5.	Spring-data </h4>
+<h4>  6.6.	Spring-security </h4>
+<h4>  6.7.	 REST and HTTP </h4>
 
 <h3> 1.	Entity-relationship Diagram </h3>
 The following figure represents the entity-relation diagram. It contains all entities that the context of the application requires. These entities have a common set of attributes and methods. Therefore, we create a Base Entity that will encapsulate these common properties and methods within one class, and other entities will extend it. 
 
- This picture shows the ERD adopted<a> Figure 1: ERD </a>.
+ This picture shows the ERD adopted <a href="https://github.com/1Anass/Hotel-Booking-Application_Backend/blob/main/ERD.png" > Figure 1: ERD </a>.
 
 Once the entities are created, we create a database in Postgres DBMS. Then we use Hibernate (ORM framework) to create the tables that correspond to entities at runtime. The relations are implemented at runtime. This is thanks to JPA annotations that allow Hibernate to understand the structure of the database and the relation between tables. To populate the database, we add an SQL file called Data.sql under the folder resources that will be run against our database at runtime after the tables creation. 
 
@@ -28,7 +28,7 @@ Once the entities are created, we create a database in Postgres DBMS. Then we us
 
 For simple data operations that our application will provide, we use data repositories. Data repositories extend the base repository that extends CRUD repository. Therefore, all repositories will have CRUD functions implemented by default at runtime. To add customized data operations, we can add functions prototypes along with the corresponding queries. Spring-data project under Spring framework allows the generation of these data operations implementation at runtime. To make Spring Boot directly expose data repositories through HTTP methods, we use the annotation @RepositoryRestSource. 
  
-The following picture shows the repositories used by each service <a>Figure 2: Repositories and Services</a>.
+The following picture shows the repositories used by each service <a href="https://github.com/1Anass/Hotel-Booking-Application_Backend/blob/main/Repositories%26Services.png"> Figure 2: Repositories and Services</a>.
 
 <h3> 3.	Business Services </h3>
 
